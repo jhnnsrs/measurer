@@ -14,6 +14,7 @@ def measure_maximum(image: Image, graph: Graph) -> Metric:
     metric = create_structure_metric(
         structure=image,
         label="max",
+        description="The maximum pixel value in the image.",
         value=float(np.max(image.data)),
         graph=graph,
         metric_kind=MetricKind.FLOAT,
@@ -27,6 +28,7 @@ def measurem_min(image: Image, graph: Graph) -> Metric:
     metric = create_structure_metric(
         structure=image,
         label="min",
+        description="The minimum pixel value in the image.",
         value=float(np.min(image.data)),
         graph=graph,
         metric_kind=MetricKind.FLOAT,
@@ -40,6 +42,7 @@ def measure_mean(image: Image, graph: Graph) -> Metric:
     metric = create_structure_metric(
         structure=image,
         label="mean",
+        description="The mean pixel value in the image.",
         value=float(np.mean(image.data)),
         graph=graph,
         metric_kind=MetricKind.FLOAT,
