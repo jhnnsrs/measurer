@@ -1,0 +1,256 @@
+app_images:
+- appImageId: 92de66de09f34f46ae5a3db2d1524f60
+  flavourName: vanilla
+  image:
+    buildAt: '2025-09-14T18:53:35.632466'
+    imageString: jhnnsrs/measurer:0.0.1-vanilla
+  inspection:
+    implementations:
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          effects: []
+          identifier: '@mikro/image'
+          key: image
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchGraphs($search: String, $values: [ID!]) {\n  options:\
+              \ graphs(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: name\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/graph'
+          key: graph
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Measure Maximum
+        portGroups: []
+        returns:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchMetrics($search: String, $values: [ID!]) {\n  options:\
+              \ metrics(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: label\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/metric'
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: measure_maximum
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          effects: []
+          identifier: '@mikro/image'
+          key: image
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchGraphs($search: String, $values: [ID!]) {\n  options:\
+              \ graphs(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: name\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/graph'
+          key: graph
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Measurem Min
+        portGroups: []
+        returns:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchMetrics($search: String, $values: [ID!]) {\n  options:\
+              \ metrics(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: label\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/metric'
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: measurem_min
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchImages($search: String, $values: [ID!]) {\n  options:\
+              \ images(\n    filters: {name: {contains: $search}, ids: $values}\n\
+              \    pagination: {limit: 10}\n  ) {\n    value: id\n    label: name\n\
+              \    __typename\n  }\n}"
+            ward: mikro
+          effects: []
+          identifier: '@mikro/image'
+          key: image
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchGraphs($search: String, $values: [ID!]) {\n  options:\
+              \ graphs(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: name\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/graph'
+          key: graph
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        collections: []
+        description: No Description
+        interfaces: []
+        isDev: true
+        isTestFor: []
+        kind: FUNCTION
+        name: Measure Mean
+        portGroups: []
+        returns:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchMetrics($search: String, $values: [ID!]) {\n  options:\
+              \ metrics(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: label\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/metric'
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: measure_mean
+    - definition:
+        args:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchRois($search: String, $values: [ID!]) {\n  options:\
+              \ rois(filters: {search: $search, ids: $values}, pagination: {limit:\
+              \ 10}) {\n    value: id\n    label: name\n    __typename\n  }\n}"
+            ward: mikro
+          effects: []
+          identifier: '@mikro/roi'
+          key: roi
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchGraphs($search: String, $values: [ID!]) {\n  options:\
+              \ graphs(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: name\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/graph'
+          key: graph
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        collections: []
+        description: Measure the area of a Region of Interest (ROI).
+        interfaces: []
+        isDev: false
+        isTestFor: []
+        kind: FUNCTION
+        name: Measure Roi Area
+        portGroups: []
+        returns:
+        - assignWidget:
+            kind: SEARCH
+            query: "query SearchMetrics($search: String, $values: [ID!]) {\n  options:\
+              \ metrics(\n    filters: {search: $search, ids: $values}\n    pagination:\
+              \ {limit: 10}\n  ) {\n    value: id\n    label: label\n    __typename\n\
+              \  }\n}"
+            ward: kraph
+          effects: []
+          identifier: '@kraph/metric'
+          key: return0
+          kind: STRUCTURE
+          nullable: false
+          validators: []
+        stateful: false
+      dependencies: []
+      dynamic: false
+      interface: measure_roi_area
+    requirements:
+    - description: An instance of ArkitektNext Datalayer to make requests to the user's
+        data
+      key: datalayer
+      optional: true
+      service: live.arkitekt.s3
+    - description: An instance of ArkitektNext kraph to relate entities
+      key: kraph
+      optional: false
+      service: live.arkitekt.kraph
+    - description: An instance of ArkitektNext Lok to authenticate the user
+      key: lok
+      optional: false
+      service: live.arkitekt.lok
+    - description: An instance of ArkitektNext Mikro to make requests to the user's
+        data
+      key: mikro
+      optional: true
+      service: live.arkitekt.mikro
+    - description: An instance of ArkitektNext Rekuest to assign to actions
+      key: rekuest
+      optional: false
+      service: live.arkitekt.rekuest
+    size: 495823090
+  manifest:
+    author: jhnnsrs
+    entrypoint: app
+    identifier: measurer
+    scopes:
+    - read
+    version: 0.0.1
+  selectors: []
+latest_app_image: 92de66de09f34f46ae5a3db2d1524f60
